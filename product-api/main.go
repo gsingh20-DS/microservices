@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/gsingh20-DS/microservices/tree/main/handlers"
+	"github.com/gsingh20-DS/microservices/tree/main/product-api/handlers"
 )
 
 func main() {
