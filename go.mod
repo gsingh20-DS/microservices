@@ -1,4 +1,4 @@
-module github.com/gsingh20-DS/microservices/tree/main/product-api/handlers
+module github.com/gsingh20-DS/microservices/tree/main/product-api
 
 go 1.17
 
