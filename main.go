@@ -16,11 +16,10 @@ func main() {
 	// })
 
 	l := log.New(os.Stdout, "This is from logger", log.LstdFlags)
-
+	sm := http.NewServeMux()
 	hh := handlers.NewHello(l)
 	gb := handlers.NewGoodbye(l)
 
-	sm := http.NewServeMux()
 	sm.Handle("/", hh)
 	sm.Handle("/goodbye", gb)
 
@@ -31,5 +30,5 @@ func main() {
 		ReadTimeout:  1 * time.Second,
 		WriteTimeout: 1 * time.Second,
 	}
-	s.ListenAndServe()
+	s.ListenAndServe(sm)
 }
